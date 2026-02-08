@@ -7,7 +7,7 @@ It scans your mailbox using the official Gmail API, identifies marketing senders
 
 ## 🎥 Demo
 
-https://github.com/GloniPereiro/GmailMarketingCleaner/blob/main/assets/demo.mp4
+[![Watch the demo](https://img.youtube.com/vi/Pikt5T1NnwM/0.jpg)](https://youtu.be/Pikt5T1NnwM)
 
 
 ## ✨ Features

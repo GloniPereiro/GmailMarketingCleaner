@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gmail Marketing Cleaner — Analyze & Clean Promotional Email</title>
+    <meta name="description" content="Gmail Marketing Cleaner scans your Gmail folders, identifies marketing senders, and helps you bulk-remove promotional emails to reclaim your inbox.">
+    <meta name="keywords" content="Gmail, marketing, email cleanup, unsubscribe, promotions, inbox">
+    <link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script defer src="/static/js/app.js"></script>
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <header class="app-header">
+        <div class="app-title-block">
+            <div class="app-title-row">
+                <div class="app-logo">G</div>
+                <div class="app-title">Gmail Marketing Cleaner</div>
+            </div>
+            <div class="app-subtitle">Scan, analyze and remove marketing emails quickly</div>
+        </div>
+
+        <div class="button-row">
+            <button id="export-btn" class="btn btn-secondary" disabled>Export CSV</button>
+        </div>
+    </header>
+
+    <section class="controls-row">
+
+        <div class="control-group">
+            <label class="control-label" for="days">Date range</label>
+            <select id="days">
+                <option value="7">7 days</option>
+                <option value="30" selected>30 days</option>
+                <option value="60">60 days</option>
+                <option value="180">180 days</option>
+                <option value="365">365 days</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="label">Folder</label>
+            <select id="label">
+                <option value="INBOX" selected>INBOX</option>
+                <option value="CATEGORY_PROMOTIONS">Promotions</option>
+                <option value="CATEGORY_SOCIAL">Social</option>
+                <option value="CATEGORY_UPDATES">Updates</option>
+            </select>
+        </div>
+
+        <div class="button-row">
+            <button id="scan-btn" class="btn btn-primary">Start Scan</button>
+            <div id="scan-status"></div>
+        </div>
+
+    </section>
+
+    <section id="progress-container">
+        <div id="progress-bar"></div>
+    </section>
+    
+    <section id="delete-progress-container" style="display:none;">
+        <div id="delete-progress-bar"></div>
+    </section>
+
+
+    <section class="filter-row">
+        <label for="domain-filter">Filter by domain</label>
+        <input type="search" id="domain-filter" placeholder="Type domain e.g. example.com">
+    </section>
+
+    <section class="table-wrapper">
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th data-sort="sender">Sender</th>
+                    <th data-sort="email">Email</th>
+                    <th data-sort="domain">Domain</th>
+                    <th data-sort="count">Message Count</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+        </table>
+    </section>
+
+</div>
+
+</body>
+</html>

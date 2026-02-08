@@ -7,7 +7,7 @@ It scans your mailbox using the official Gmail API, identifies marketing senders
 
 ## 🎥 Demo
 
-<video controls width="600"> <source src="assets/demo.mp4" type="video/mp4"> Your browser does not support the video tag. </video>
+https://youtu.be/Pikt5T1NnwM
 
 
 ## ✨ Features
